@@ -14,9 +14,9 @@ Vue.config.productionTip = false
 
 Vue.use(Alertifyjs,{
   notifier:{
-      delay:5,
-      position:'top-right',
-      closeButton: false
+    delay:5,
+    position:'top-right',
+    closeButton: false
   }
 })
 
@@ -29,7 +29,10 @@ new Vue({
   mounted() {
   	let vm = this
 
-  	vm.$notify('TEST','success')
+    vm.$notify('TEST','success')
+    vm.$alert('Alert Title', 'Alert Message!')
+    vm.$confirm('Confirm Title', 'Confirm Message')
+    vm.$prompt( 'Prompt Title', 'Prompt Message', 'Prompt Value')
 
   }
 })

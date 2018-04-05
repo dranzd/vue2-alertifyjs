@@ -34,6 +34,9 @@ new Vue({
   	let vm = this
 
   	vm.$notify('TEST','success')
+  	vm.$alert('Alert Title', 'Alert Message!', function(){ alertify.success('Ok'); })
+	vm.$confirm('Confirm Title', 'Confirm Message', function(){ alertify.success('Ok') }, function(){ alertify.error('Cancel')})
+	vm.$prompt( 'Prompt Title', 'Prompt Message', 'Prompt Value', function(evt, value) { alertify.success('You entered: ' + value) }, function() { alertify.error('Cancel') })
 
   }
 })
@@ -49,6 +52,9 @@ export default {
 	name:'test'
 	mounted() {
 		this.$confirm()
+	  	this.$alert('Alert Title', 'Alert Message!', function(){ alertify.success('Ok'); })
+		this.$confirm('Confirm Title', 'Confirm Message', function(){ alertify.success('Ok') }, function(){ alertify.error('Cancel')})
+		this.$prompt( 'Prompt Title', 'Prompt Message', 'Prompt Value', function(evt, value) { alertify.success('You entered: ' + value) }, function() { alertify.error('Cancel') })
 	}
 }
 </script>
