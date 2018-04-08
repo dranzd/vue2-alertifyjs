@@ -1,6 +1,6 @@
 {
   "name": "vue2-alertifyjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue2 Alertifyjs Plugin",
   "main": "dist/vue2-alertifyjs.common.js",
   "module": "dist/vue2-alertifyjs.esm.js",
